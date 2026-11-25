@@ -21,6 +21,20 @@ authoritative source or weaken the claim · route each finding to a surface then
 rest · spend no more words on your own error than the error cost. Plus a 15-item pre-send
 checklist.
 
+## What's in it
+
+```
+.claude-plugin/marketplace.json                  <- marketplace entry
+plugins/investigation-discipline/
+  .claude-plugin/plugin.json                     <- plugin manifest
+  agents/investigator.md                         <- read-only investigation subagent
+  skills/investigation-discipline/SKILL.md       <- the gates (425 lines)
+```
+
+Note: the two manifests live in `.claude-plugin/` directories. **Finder hides dot-folders by
+default**, so in a file browser this repo looks like it contains one markdown file. Press
+`Cmd+Shift+.` on macOS, or use `find . -not -path './.git/*'`, to see the real structure.
+
 ## Install
 
 ```bash
@@ -35,12 +49,26 @@ To try it from a local clone before pushing:
 /plugin install investigation-discipline@secops-agent-skills
 ```
 
-## Subagents do not inherit it
+## Subagents
 
-A spawned subagent does not pick the gates up automatically. Either say so in the subagent's
-prompt, or add a pointer to `~/.claude/CLAUDE.md` so every agent on the machine reads the
-skill first. This matters: subagent reports are a common source of unverified negatives
-reported as fact, which is exactly what gate 4 exists to stop.
+Installing the plugin gives you an `investigator` agent that carries the gates itself, so you
+no longer depend on a `CLAUDE.md` pointer that subagents may not read. Use it in place of a
+general-purpose agent whenever the output will be a finding, verdict, severity or remediation
+plan.
+
+This matters because subagent reports are a common source of unverified negatives reported as
+fact — an empty tool result becomes "there is none of that here" — which is exactly what
+gate 4 exists to stop.
+
+## Editing the skill
+
+`~/.claude/skills/investigation-discipline` is a symlink into this repo, so the file you edit
+from any session *is* the published file. After changing it, commit here. There is no copy
+step and nothing can drift.
+
+If you move or delete this repo, that symlink breaks and the skill stops loading. A copy of
+the pre-symlink version is kept locally as `.skill-backup-before-symlink.md` (gitignored),
+and every version is in this repo's history.
 
 ## On the anchor cases
 
