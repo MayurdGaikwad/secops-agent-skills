@@ -19,6 +19,19 @@ sentence adds beyond the evidence. If you cannot, write the question instead of 
 This is the one rule that is never traded for speed, helpfulness or sounding certain. It is
 also in `~/.claude/CLAUDE.md`, which loads whether or not this skill does.
 
+**Its scope is every word, not every finding.** The gate fires on the sentences that look
+like claims — a severity, a count, a cause — and the prose between them travels unexamined
+because it reads as scaffolding. It is not scaffolding. A time reference, a duration, an
+ordering, a "finally", a "still open", a "he already did X" are each assertions about the
+world, and they reach the reader with exactly the authority of the finding they sit next to.
+Interrogate the connective tissue of a draft on the same terms as its verdict.
+
+**And a claim with no possible artifact is inadmissible, not exempt.** Rule Zero's three
+questions look backwards at evidence that exists, so a past-tense claim with nothing behind
+it trips the rule loudly. A claim that depends on something that has not happened yet
+returns nothing to question 1 — and *nothing available to check* is easily mistaken for
+*nothing to check*. Unexaminable means do not write it.
+
 Everything below is a gate. Pass each one before the finding goes in writing.
 
 ---
@@ -471,6 +484,32 @@ Two tests before any recommendation leaves you:
   chase, not the task. Recommending an action the reader cannot execute leaves them holding
   a priority with no move attached.
 
+### 6i — A draft contains nothing that depends on when it is sent
+
+**Rule: you do not control the send time. The person does, and they may hold the draft for a
+day, send it at 2am, or send it after the thing it describes has changed. Every sentence must
+survive that.**
+
+Relative time is the common case and the easiest to miss, because you write a draft in the
+voice of the moment it goes out, and that voice imports a send time for free: "yesterday
+evening", "this morning", "earlier today", "as of now", "still unresolved", "before you
+finish for the day". Each one is an assumption about the reader's future action wearing the
+clothes of a fact about the past. Write the date and the timezone, or write nothing. The
+timestamps in the source are the evidence; the gap between then and the send is not yours to
+assert.
+
+It is not only time. Anything whose truth the send could change belongs to the same class:
+a count that is still moving, a person's availability, an open/closed state, "nobody has
+replied yet", an ordering of events that assumes this message is next.
+
+**The test: if this sits in a draft folder for 48 hours and goes out unchanged, does any
+sentence become false?** If yes, that sentence is anchored to a send time you were never
+given. Cut it or date it.
+
+This is the gate that catches what Rule Zero structurally cannot. Rule Zero asks what
+established a claim; here there is no artifact to name yet, and there cannot be until after
+the message leaves — at which point nobody is checking.
+
 ## Gate 7 — Spend no more words on your own error than the error cost
 
 **Rule: correct it in one line, in place, and move. No retraction essays, no tallies.**
@@ -523,6 +562,11 @@ Run this before any finding, verdict or risk rating leaves a draft:
 21. **Any status, plan or "what's left"** — do I own this ticket or hold one slice? Is every
    item on my list mine to perform, or phrased as a chase? Can the reader act on my
    recommendation today without anyone else?
+22. **Any draft** — if it sits unsent for 48 hours, does a sentence become false? Did I cut
+   every relative time ("yesterday", "this morning", "as of now") in favour of a date, or
+   nothing?
+23. **Every word, not just the findings** — did I interrogate the prose between the claims on
+   the same terms? Is any part of it unexaminable rather than established?
 
 ## What this does not change
 

@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.4.0
+
+- Gate 6i: a draft contains nothing that depends on when it is sent. You do not control the
+  send time, so every relative time — "yesterday evening", "this morning", "as of now",
+  "nobody has replied yet" — is an assumption about the reader's future action dressed as a
+  fact about the past. Write the date and timezone, or nothing. Test: if the draft sits
+  unsent for 48 hours, does a sentence become false?
+- Rule Zero scope corrected on two counts. Its scope is every word, not every finding: the
+  prose between the claims travels unexamined because it reads as scaffolding, but a time
+  reference, a duration, an ordering or a "finally" reaches the reader with the authority of
+  the finding beside it. And a claim with no possible artifact is inadmissible, not exempt —
+  the three questions look backwards, so a claim about something that has not happened yet
+  returns nothing to "what established this", and *nothing available to check* gets mistaken
+  for *nothing to check*.
+- Pre-send checklist: items 22 and 23 added.
+
 ## 1.3.0
 
 - Gate 6h: establish your role on the ticket before reporting on it. Holding one slice means

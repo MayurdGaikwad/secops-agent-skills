@@ -1,6 +1,6 @@
 {
   "name": "investigation-discipline",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Turns investigations into answers instead of records. Gates for closing labelled unknowns, tracing data to its sink, checking whether upstream already fixed it, proving negative results before reporting them, and shaping output as one decision with an owner and a test. For CVE impact checks, exposure reviews, incident response, root-cause analysis and security triage.",
   "author": {
     "name": "Mayur Gaikwad"
