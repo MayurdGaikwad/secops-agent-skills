@@ -19,7 +19,8 @@ Gates: close the unknown before labelling it · trace to the sink, not the patte
 whether upstream already fixed it · prove a negative before reporting it · go to the
 authoritative source or weaken the claim · route each finding to a surface then delete the
 rest · verify the venue handles this kind of request · report a blocker or a correction,
-never that a blocker cleared · spend no more words on your own error than the error cost. Plus a pre-send checklist.
+never that a blocker cleared · know whether you own the ticket or hold one slice of it ·
+spend no more words on your own error than the error cost. Plus a pre-send checklist.
 
 ## What's in it
 

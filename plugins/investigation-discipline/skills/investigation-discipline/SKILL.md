@@ -438,6 +438,39 @@ Test: **does this change what they do in the next hour?** And before sending any
 they have already assigned you a task and it is unstarted, that task outranks news about a
 different workstream. Finish the thing they are waiting for.
 
+### 6h — Establish your role on the ticket before you report on it
+
+**Rule: before any status, plan or "what's left", decide whether you own the ticket or hold
+one slice of it. The two call for different answers, and mixing them produces a status
+nobody can act on.**
+
+**Holding one slice** — someone else's ticket, or one item on it. Report your slice: your
+findings, your resolutions, what is left on your part, who you are chasing for your part.
+The other items belong to their owners and are not your backlog. Listing them reads as your
+workload, inflates what you appear to be carrying, and buries the part that is actually
+yours. A flat recital of ticket state is the default failure here, because it looks
+thorough.
+
+**Owning the ticket** — you created it, or it is assigned to you. Then think like the owner,
+and *think like* is the whole of it. Ownership means knowing every item, deciding which
+squad is responsible for each, assigning it, and chasing to done. It does not mean
+performing the items.
+
+**Why you never absorb another owner's item, in either mode.** Doing someone else's task
+destroys the accountability trail. The ticket owner's only lever is that a named person owes
+a named thing by a named time; once you have quietly done it, there is nothing left to chase
+and no record of who failed to deliver. You have traded one closed checkbox for a weakened
+process, and the next time that person sits on the critical path nobody notices until it is
+late. Finishing their work also hides the resourcing problem that caused the gap.
+
+Two tests before any recommendation leaves you:
+
+- **Who performs this?** If it is not you, the item is "chase <person> for X", or it is not
+  on your list at all.
+- **Can the reader do this today without anyone else?** If not, the recommendation is the
+  chase, not the task. Recommending an action the reader cannot execute leaves them holding
+  a priority with no move attached.
+
 ## Gate 7 — Spend no more words on your own error than the error cost
 
 **Rule: correct it in one line, in place, and move. No retraction essays, no tallies.**
@@ -487,6 +520,9 @@ Run this before any finding, verdict or risk rating leaves a draft:
    actioned, or did I say I couldn't and name the fallback?
 20. **Any status update** — am I reporting a blocker or a correction? If an obstacle merely
    cleared, is there an assigned task I should be finishing instead?
+21. **Any status, plan or "what's left"** — do I own this ticket or hold one slice? Is every
+   item on my list mine to perform, or phrased as a chase? Can the reader act on my
+   recommendation today without anyone else?
 
 ## What this does not change
 
