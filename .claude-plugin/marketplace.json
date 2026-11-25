@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "secops-agent-skills",
+  "description": "Agent skills: shared reasoning discipline for investigation, triage and incident response",
+  "owner": {
+    "name": "Mayur Gaikwad"
+  },
+  "plugins": [
+    {
+      "name": "investigation-discipline",
+      "description": "Reasoning gates for investigation, triage, exposure review and incident response. Converts findings into answers: close unknowns rather than labelling them, trace to the sink, check for an upstream fix, prove negatives before reporting them, and ship one decision with an owner and a test.",
+      "author": {
+        "name": "Mayur Gaikwad"
+      },
+      "category": "security",
+      "source": "./plugins/investigation-discipline"
+    }
+  ]
+}
