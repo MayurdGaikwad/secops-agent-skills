@@ -18,7 +18,8 @@ stopping one hop short of the answer, labelling the gap, and writing it up caref
 Gates: close the unknown before labelling it · trace to the sink, not the pattern · check
 whether upstream already fixed it · prove a negative before reporting it · go to the
 authoritative source or weaken the claim · route each finding to a surface then delete the
-rest · spend no more words on your own error than the error cost. Plus a 15-item pre-send
+rest · verify the venue handles this kind of request · report a blocker or a correction,
+never that a blocker cleared · spend no more words on your own error than the error cost. Plus a 20-item pre-send
 checklist.
 
 ## What's in it
@@ -28,7 +29,7 @@ checklist.
 plugins/investigation-discipline/
   .claude-plugin/plugin.json                     <- plugin manifest
   agents/investigator.md                         <- read-only investigation subagent
-  skills/investigation-discipline/SKILL.md       <- the gates (425 lines)
+  skills/investigation-discipline/SKILL.md       <- the gates (500 lines)
 ```
 
 Note: the two manifests live in `.claude-plugin/` directories. **Finder hides dot-folders by

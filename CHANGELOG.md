@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.2.0
+
+- Gate 6f: verify from a venue's own traffic that it handles this kind of request before
+  drafting. Owners' opinions about who owns a system hedge and contradict; the request shape
+  decides the venue, not the system name.
+- Gate 6g: report a blocker or a correction, never that a blocker cleared. An unblock update
+  reads as progress but carries nothing actionable, and an assigned task left unstarted
+  outranks news from another workstream.
+- Gate 6e extended: cut your reasoning about your own phrasing, and every remark on how the
+  other person worked. Praise and "rather than just X" imply the alternative they contrast
+  with and put you in the position of grading someone doing you a favour.
+- Pre-send checklist: items 19 and 20 added, item 15 extended.
+
 ## 1.1.0
 
 - Added the `investigator` agent, so a spawned subagent carries the gates itself instead of

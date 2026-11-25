@@ -369,6 +369,23 @@ Deadlines, retention windows, who else is blocked and what you already ruled out
 context, not theirs. They are granting access or running a query; they do not need the
 investigation.
 
+**Two things never belong in an ask: your reasoning about your own choices, and any
+remark on how the other person worked.**
+
+Explaining the shape of your own request — "two commands rather than a loop so it stays
+small", "I've kept this short" — is you narrating your care. The answerer runs the command
+either way.
+
+Commenting on their conduct is worse than padding. "Thanks for catching it rather than just
+sending the output" implies the alternative it contrasts with, and it puts you in the
+position of grading a colleague who is doing you a favour. Praise, approval and
+"good of you to X" all carry that implication. One word of acknowledgement is the entire
+budget — "Right —", "Thanks —" — and then the ask.
+
+The anchor: a 140-word request cut to 70 lost only the author's justifications for their own
+phrasing and one clause praising the recipient for spotting an error. Everything the
+recipient needed in order to act survived the cut.
+
 ### 6f — Verify the venue before you draft
 
 **Rule: before writing to a channel or a person, confirm from their own traffic that they
@@ -458,7 +475,8 @@ Run this before any finding, verdict or risk rating leaves a draft:
 13. **Any message draft** — is its full text in the reply, not in a file I summarised?
 14. **Any question I am about to ask a person** — is the answer already in the ticket, notes
    or thread I was given? Did I read what they were replying to?
-15. **Any ask** — does every sentence left in it change whether they can answer?
+15. **Any ask** — does every sentence left in it change whether they can answer? Did I cut
+   my reasoning about my own phrasing, and every remark on how the other person worked?
 16. **Any finding someone else handed me** — is it attributed to them, and have I separated
    their observations from my inferences on top of them?
 17. **Each claim in it** — sourced, domain knowledge, or offhand? Did I follow the links, and
