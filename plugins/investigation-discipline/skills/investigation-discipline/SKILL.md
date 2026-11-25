@@ -13,6 +13,12 @@ questions the first had left open as "unverified".
 **The failure mode is not sloppiness. It is finding the right places to look and then
 stopping one hop short of the answer, labelling the gap, and writing it up carefully.**
 
+**RULE ZERO governs all of it: no assumptions.** Every gate below is one way of applying the
+same rule — name what established the claim, say who established it, and mark anything your
+sentence adds beyond the evidence. If you cannot, write the question instead of the claim.
+This is the one rule that is never traded for speed, helpfulness or sounding certain. It is
+also in `~/.claude/CLAUDE.md`, which loads whether or not this skill does.
+
 Everything below is a gate. Pass each one before the finding goes in writing.
 
 ---
@@ -53,6 +59,30 @@ task came from before asking about the task.**
 
 Specifically: when someone's message puzzles you, find the message or document they are
 responding to. Most puzzling messages are ordinary replies to something you have not read.
+
+### 1b — List the options before working any of them
+
+**Rule: when a question has more than one possible source or route, enumerate all of them
+first, then pick the cheapest one that would settle it. Do not take the first and build a
+result on it.**
+
+Taking the first path is not wrong because the path is wrong. It is wrong because the
+cheapest decisive check is often not the first one offered, and you cannot tell which is
+cheapest until you have listed them.
+
+The anchor case: asked whether a user had AWS access, the obvious route was the handbook
+someone linked. That route meant installing a CLI, configuring it, and running a login —
+which then failed with a discovery error. The authoritative answer was a single read of the
+identity provider's app assignments: no AWS application was assigned at all, so no amount
+of CLI configuration could ever have worked. One call would have closed the question before
+any of the work. The handbook was the first source offered; it was not the deciding one.
+
+Also: when someone hands you two routes ("try X, or Y if that doesn't work"), check what
+both actually are before recommending one. Dismissing the second without looking is the
+same error as taking the first without looking.
+
+So, before digging: what are all the places that could answer this? Which of them is
+authoritative? Which is one call away? Start there, and keep the rest as fallbacks.
 
 ## Gate 2 — Trace to the sink, not to the pattern
 
@@ -160,6 +190,65 @@ Inference from derived artifacts is where same-shaped errors come from.
 When the authoritative source is out of reach, the finding is: *"this needs X, which I
 cannot read; here is who can and what question to ask it."* That is an action. "Probably
 fine" is not.
+
+### 5a — A colleague's reading is a derived artifact too
+
+**Rule: when someone hands you a finding from a system you cannot reach, it stays theirs
+until you check it. Attribute it, mark what you inferred on top of it, and never restate it
+as something you established.**
+
+This is the hardest case of gate 5, because an expert colleague reading their own system
+feels like primary evidence. It isn't. They are a person reading a console, and you are
+relaying a reading of a reading. Their competence is not the issue — provenance is.
+
+Two distinct failures, and the second is worse:
+
+1. **Relaying as establishing.** Writing "we found X" when what happened is "they told me X".
+   The fix is one word: *per <name>*. It costs nothing and it tells the reader which
+   questions to send where.
+2. **Compressing their snapshots into your continuity.** The anchor case: a colleague gave
+   two dated observations — a resource configured a certain way on one date, and a rule
+   present in a snapshot from eighteen months earlier. That was turned into "the exposure
+   was seven months", which asserts an unbroken state across the gap between them. Nobody
+   said that. Two points are not a line.
+
+Before passing on someone else's finding, ask: **which words here are theirs, and which are
+mine?** Then ask what you would have to see to turn their snapshots into a duration — and
+either go and see it, ask them to, or say the duration is unestablished.
+
+### 5b — Grade the message before you build on it
+
+**Rule: before any statement from a person becomes part of a finding, ask what that
+statement is standing on. Sourced claim, domain knowledge, or offhand remark — they carry
+different weight, and the same person mixes all three in one hour.**
+
+Gate 1a asks what the sender is *doing*. This asks what their words are *worth as evidence*.
+Grade each claim, not the message:
+
+| Signal | Class | What you may do with it |
+|---|---|---|
+| Links an artifact, event id, timeline, query, file path | **Sourced** | Follow the link. Then it is yours. Until then, attribute. |
+| Stated flatly, no artifact, inside their own domain | **Domain knowledge** | Attribute by name and keep it separable. Probably right; not evidence. |
+| In passing, hedged, "should", "I think", no base | **Offhand** | Never a finding. Convert it to a question or a check. |
+| Their wording goes beyond what their own artifact shows | **Their inference** | Mark it as theirs, not as the artifact's. |
+
+The anchor case is one person, one hour, both extremes:
+
+- A dated block of security-group history with a console deep link on **every** claim —
+  instance timeline, group timeline, three CloudTrail event ids. Thoroughly sourced.
+- *"You should have access to cloudtrail"* — offhand, no base. It was **wrong**: no AWS
+  application was assigned to that account at all.
+
+Both were taken at face value. One produced a finding built on unfollowed links; the other
+produced an afternoon of installing a CLI that could never have authenticated. Grading them
+would have produced a link to open and a question to ask — instead of two errors.
+
+Two traps inside a well-sourced message:
+
+- **Sourced for them is not verified for you.** A link makes a claim *checkable*, which is
+  not *checked*. If you cannot open it, the finding stays theirs.
+- **The unlinked sentence hides in the sourced block.** When four claims carry links and the
+  fifth does not, the fifth inherits their authority by adjacency. Find it and separate it.
 
 ## Gate 6 — Route each finding to a surface, then delete the rest
 
@@ -274,6 +363,12 @@ it gets none.
 Corollary: **do not offer a menu of readings when one is clearly right.** State it and ask
 for confirmation. Enumerating three interpretations moves your uncertainty onto them.
 
+**Justification is one clause, not a paragraph.** A ticket id, its priority and what it is
+("Needed for TICKET-123, Urgent — the <host> compromise") is the whole reason anyone needs.
+Deadlines, retention windows, who else is blocked and what you already ruled out are your
+context, not theirs. They are granting access or running a query; they do not need the
+investigation.
+
 ## Gate 7 — Spend no more words on your own error than the error cost
 
 **Rule: correct it in one line, in place, and move. No retraction essays, no tallies.**
@@ -312,6 +407,12 @@ Run this before any finding, verdict or risk rating leaves a draft:
 14. **Any question I am about to ask a person** — is the answer already in the ticket, notes
    or thread I was given? Did I read what they were replying to?
 15. **Any ask** — does every sentence left in it change whether they can answer?
+16. **Any finding someone else handed me** — is it attributed to them, and have I separated
+   their observations from my inferences on top of them?
+17. **Each claim in it** — sourced, domain knowledge, or offhand? Did I follow the links, and
+   did I spot the unlinked sentence sitting inside the sourced block?
+18. **Before digging** — did I list every source that could answer this and start with the
+   authoritative or cheapest one, rather than the first one offered?
 
 ## What this does not change
 
