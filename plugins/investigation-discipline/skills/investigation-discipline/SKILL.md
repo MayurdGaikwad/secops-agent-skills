@@ -369,6 +369,58 @@ Deadlines, retention windows, who else is blocked and what you already ruled out
 context, not theirs. They are granting access or running a query; they do not need the
 investigation.
 
+### 6f — Verify the venue before you draft
+
+**Rule: before writing to a channel or a person, confirm from their own traffic that they
+handle this kind of request. A channel name, an org chart and a colleague's "I believe" are
+guesses. Ticket history is evidence.**
+
+Two people will often disagree about who owns a system, and both will hedge. Neither
+statement is checkable as written, and picking one on seniority sends the ask to the wrong
+queue, where it waits politely until someone redirects it.
+
+The anchor case: one colleague said *"this would be infra I believe"*, another said
+*"<person> can help, he has access to it"* — opposite directions, both unsourced. Reading the
+channels settled it in two searches: the service-desk channel grants access to that system by
+*squad membership*, a real repeated ticket flow; the platform channel owns its *tokens,
+policies and mounts*, and that channel's own triage bot said so plainly: creating a new
+mount is a platform change, not something a token can do. Both humans were half right. The request
+shape decided the venue, not the system name.
+
+Also check that one word isn't two systems. The same channel handled "vault" meaning the
+secrets manager and "vault" meaning a password-manager share — adjacent in search, different
+owners, different flows entirely.
+
+Test: **can I cite one request of this shape that this venue actioned?** If not, the ask may
+still be right, but say so in it and name the fallback.
+
+### 6g — A blocker is worth reporting; a blocker clearing is not
+
+**Rule: when someone has given you a task, send a status message when you are stuck, or when
+something you already told them is wrong. Do not send one because an obstacle cleared —
+deliver the result instead.**
+
+Three cases, three different right answers:
+
+- **A blocker appears** → one line, no explanation. *"X is blocking this; once it's done I'll
+  go ahead."* That is the whole message. It accounts for the lag and lets them help if they
+  can. The investigation behind it is yours.
+- **A blocker clears** → no message. The work is now possible, so do the work. An unblock
+  update reads as progress but carries nothing the reader can act on, and it spends the
+  attention you will need when you have the result.
+- **Something you told them is wrong** → message, promptly. They may have repeated it upward
+  or built a plan on it. Lead with the correction, not with how you found it.
+
+The anchor case: a blocker had been logged as *"awaiting two teams for a Vault grant"*. It
+turned out not to exist — the mount list was public and CI's existing policy already permitted
+the enumeration. The discovery was genuinely interesting and would have made three
+paragraphs. The only part worth sending was one clause retracting the earlier blocker, and
+even that could ride along with the result rather than arrive on its own.
+
+Test: **does this change what they do in the next hour?** And before sending anything: if
+they have already assigned you a task and it is unstarted, that task outranks news about a
+different workstream. Finish the thing they are waiting for.
+
 ## Gate 7 — Spend no more words on your own error than the error cost
 
 **Rule: correct it in one line, in place, and move. No retraction essays, no tallies.**
@@ -413,6 +465,10 @@ Run this before any finding, verdict or risk rating leaves a draft:
    did I spot the unlinked sentence sitting inside the sourced block?
 18. **Before digging** — did I list every source that could answer this and start with the
    authoritative or cheapest one, rather than the first one offered?
+19. **Any message to a channel or team** — can I cite one request of this shape that they
+   actioned, or did I say I couldn't and name the fallback?
+20. **Any status update** — am I reporting a blocker or a correction? If an obstacle merely
+   cleared, is there an assigned task I should be finishing instead?
 
 ## What this does not change
 
