@@ -290,7 +290,7 @@ the decoding work.
 
 So: **the metric is reader-actions per unit of reader effort, not per word.** Brevity only
 helps when it adds no decoding work. The reason a good short message works is that it is
-*literal* — "Can you assign someone? Henrique looks closest to that code" — not that it is
+*literal* — "Can you assign someone? Dana looks closest to that code" — not that it is
 short. Copying the length while keeping the compression gets the worst of both.
 
 Concretely, in anything others read:
