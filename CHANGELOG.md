@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.5.0
+
+- Gate 6j: an announced open item gets its resolution, not a progress report. Once you have
+  written that something is open and you are chasing it, the commitment is on the record, so
+  every update short of the finished answer costs a re-read and carries no new decision.
+  Test: is this the resolution, or my progress toward it?
+- Two qualifications on it. The hold has a deadline, not an open end: where an SLA or
+  handover means someone could act on a list you now know to be incomplete, the delta goes
+  up early — delta only, with no restatement of the open points. And presentation follows
+  the same rule: a table carries the new rows only, because reprinting the known rows to
+  give the new ones context buries three new facts inside nine.
+- Pre-send checklist: item 24 added.
+
 ## 1.4.0
 
 - Gate 6i: a draft contains nothing that depends on when it is sent. You do not control the

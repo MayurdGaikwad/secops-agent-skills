@@ -20,8 +20,9 @@ whether upstream already fixed it · prove a negative before reporting it · go 
 authoritative source or weaken the claim · route each finding to a surface then delete the
 rest · verify the venue handles this kind of request · report a blocker or a correction,
 never that a blocker cleared · know whether you own the ticket or hold one slice of it ·
-write nothing in a draft that depends on when it is sent · spend no more words on your own
-error than the error cost. Plus a pre-send checklist.
+write nothing in a draft that depends on when it is sent · give an announced open item its
+resolution, not a progress report · spend no more words on your own error than the error
+cost. Plus a pre-send checklist.
 
 ## What's in it
 

@@ -510,6 +510,34 @@ This is the gate that catches what Rule Zero structurally cannot. Rule Zero asks
 established a claim; here there is no artifact to name yet, and there cannot be until after
 the message leaves — at which point nobody is checking.
 
+### 6j — An announced open item gets its resolution, not a progress report
+
+**Rule: once you have written that something is open and that you are chasing it, every
+update short of the finished answer is noise. Post once, when it is resolved, carrying only
+what no reader has seen.**
+
+The commitment is already on the record. "Not final yet — X is unenumerated, chasing it, the
+list may grow" tells the reader exactly what to expect and when to expect a change. A later
+comment that says *some* of X came back, and restates the part already posted to give the new
+part context, costs every reader a full re-read and gives them no decision they did not
+already have. It also reads as activity rather than result, which is the thing Gate 6 exists
+to prevent.
+
+**The test: is this the resolution of the item, or a report on my progress toward it?** Only
+the first is worth a comment.
+
+**The hold has a deadline, not an open end.** Where the ticket has an SLA, a release gate or
+a handover time, weigh what the reader would do with the stale version in the meantime. If
+someone could act today on a list you now know to be incomplete, the delta goes up before
+that deadline even though the item is unfinished — and it goes up as *delta only*, with no
+restatement of the open points, because those are already declared.
+
+**Presentation follows the same rule.** A table carries the new rows only. Reprinting the
+known rows so the new ones have context is the most common way this gate gets broken, because
+it feels like completeness; what it actually does is bury three new facts inside nine. If the
+reader needs the full picture they have the earlier comment, and the ticket is the place that
+accumulates — not each individual comment.
+
 ## Gate 7 — Spend no more words on your own error than the error cost
 
 **Rule: correct it in one line, in place, and move. No retraction essays, no tallies.**
@@ -567,6 +595,9 @@ Run this before any finding, verdict or risk rating leaves a draft:
    nothing?
 23. **Every word, not just the findings** — did I interrogate the prose between the claims on
    the same terms? Is any part of it unexaminable rather than established?
+24. **Any update on something I already said was open** — is this its resolution, or my
+   progress toward it? Does any table or paragraph restate what is already posted? If a
+   deadline forces it out early, is it delta only?
 
 ## What this does not change
 
